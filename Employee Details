@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class EmployeeSalary {
+
+    public static void main(String[] args) {
+
+        // Create a Scanner object to read user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Get the employee's name
+        System.out.println("Enter the employee's name: ");
+        String name = scanner.nextLine();
+
+        // Get the employee's ID
+        System.out.println("Enter the employee's ID: ");
+        int id = scanner.nextInt();
+
+        // Get the employee's basic salary
+        System.out.println("Enter the employee's basic salary: ");
+        double basicSalary = scanner.nextDouble();
+
+        // Calculate the employee's gross salary
+        double grossSalary = basicSalary + 0.1 * basicSalary + 0.05 * basicSalary;
+
+        // Calculate the employee's income tax
+        double incomeTax = 0.2 * grossSalary;
+
+        // Calculate the employee's net salary
+        double netSalary = grossSalary - incomeTax;
+
+        // Print the employee's information
+        System.out.println("Employee Name: " + name);
+        System.out.println("Employee ID: " + id);
+        System.out.println("Basic Salary: " + basicSalary);
+        System.out.println("Gross Salary: " + grossSalary);
+        System.out.println("Income Tax: " + incomeTax);
+        System.out.println("Net Salary: " + netSalary);
+    }
+}
